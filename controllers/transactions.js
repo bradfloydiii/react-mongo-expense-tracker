@@ -23,7 +23,6 @@ exports.getTransactions = async (req, res, next) => {
 // @route /api/v1/transactions
 // @access Public
 exports.addTransaction = async (req, res, next) => {
-  console.log('Req: ', req);
   try {
     const { text, amount } = req.body;
     const transaction = await Transaction.create(req.body);
@@ -42,7 +41,7 @@ exports.addTransaction = async (req, res, next) => {
     } else {
       return res.status(500).json({
         success: false,
-        error: req.body,
+        error: 'Server Error',
       });
     }
   }

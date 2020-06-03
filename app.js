@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const dotenv = require('dotenv');
-// const colors = require('colors');
+const colors = require('colors');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const connectDB = require('./config/db');
